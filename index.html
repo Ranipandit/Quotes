@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body id="body">
+<div id="main">
+	<div>
+	<p id="text"></p>
+	</div>
+	<span id="subtext"></span>
+    <button  onclick="changeQuote();" id="button">Kuch Aur!</button>
+   
+</div>
+<script type="text/javascript">
+var text = "Be the change you wish to see.";
+var subtext = "Mahatma Gandhi";
+
+document.getElementById("text").innerHTML = text;
+document.getElementById("subtext").innerHTML = subtext;
+var quotes = ["Be the change you wish to see.",
+"Social progress can be measured by the social position of the female sex.",
+"I like the religion that teaches liberty, equality and fraternity.",
+"If you tremble with indignation at every injustice then you are a comrade of mine.",
+"Teaching is a very noble profession that shapes the character, caliber, and future of an individual. If the people remember me as a good teacher, that will be the biggest honour for me.",
+];
+var authors = ["Mahatma Gandhi","Karl Marx","B. R. Ambedkar","Ernesto Che Guevara",
+"Abdul Kalam"];
+var bgcolors = ["red","white","blue","black","yellow","pink","silver", "BlanchedAlmond", "chocolate", "darkorchid","green","purple"];
+//var  i = 0 ;
+function changeQuote() {
+	b = Math.floor(Math.random()*quotes.length);
+	c = Math.floor(Math.random()*bgcolors.length);
+	d = Math.floor(Math.random()*bgcolors.length);
+
+
+  document.getElementById("text").innerHTML = quotes[b];
+  document.getElementById("subtext").innerHTML = authors[b];
+  document.getElementById("body").style.backgroundColor = bgcolors[c];
+  document.getElementById("main").style.backgroundColor = bgcolors[d];
+}
+</script>
+</body>
+</html>
